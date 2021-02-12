@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 const { graphqlHTTP } = require('express-graphql');
 const {
     GraphQLSchema,
@@ -12,6 +13,8 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config/config.env' });
 
 const app = express();
+
+app.use(cors());
 
 // Person
 const PersonType = new GraphQLObjectType({
