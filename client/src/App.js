@@ -12,7 +12,7 @@ import GetPeople from './components/GetPeople';
 const errorLink = onError(({ graphqlErrors, networkError }) => {
   if (graphqlErrors) {
     graphqlErrors.map(({ message, location, path }) => {
-      alert(`Graphql error ${message}`);
+      console.log(`Graphql error ${message}`);
     });
   }
 });
@@ -30,7 +30,6 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      {' '}
       <GetPeople />
     </ApolloProvider>
   );

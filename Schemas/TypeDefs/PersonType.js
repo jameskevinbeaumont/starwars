@@ -1,9 +1,12 @@
+const axios = require('axios');
 const {
     GraphQLObjectType,
     GraphQLString,
 } = require('graphql');
 
-// Person
+const PlanetType = require('./PlanetType');
+
+// Person Type Def
 const PersonType = new GraphQLObjectType({
     name: 'Person',
     fields: () => ({

@@ -3,7 +3,7 @@ const {
     GraphQLString,
 } = require('graphql');
 
-// Planet - 'origin'
+// Planet Type Def ('origin')
 const PlanetType = new GraphQLObjectType({
     name: 'Planet',
     fields: () => ({

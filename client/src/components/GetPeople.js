@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { LOAD_PEOPLE } from '../graphql/Queries';
 import Pagination from './Pagination';
 
@@ -27,7 +27,13 @@ function GetPeople() {
         <div className="main">
             <div className="card-container">
                 {currentPeople.map((person => {
-                    return <div className="card-container__card" key={person.name}> {person.name} </div>
+                    return <div className="card-container__card" key={person.name}>
+                        <div className="card-container__card-name">{person.name}</div>
+                        <div className="card-container__card-details">Home Planet: {person.origin.name}</div>
+                        <div className="card-container__card-details">Height: {person.height}</div>
+                        <div className="card-container__card-details">Mass: {person.mass}</div>
+                        <div className="card-container__card-details">Birthdate: {person.birthdate}</div>
+                    </div>
                 }))}
             </div>
             <Pagination

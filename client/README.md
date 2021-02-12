@@ -1,3 +1,9 @@
+# About
+
+This project was created using node.js for the server along with GraphQL. Dependencies on the server include: axios, concurrently, cors, dotenv, express, express-graphql, graphql, cross-env and nodemon. The project has been left in the "development" state meaning you can download and then start the project, which will start both the client and the server, with the command "npm run dev". I am using concurrently to allow for both the server and client to run using a single command and nodemon to allow for changes to the server without having to stop and restart the server.
+
+React was used for the front-end client which included graphql and @apollo/client to access the data from the server. I have not used graphql before and have only used knex and bookshelf to access a SQL backend database or REST endpoints via axios. The styling is minimal though all points on the technical exercise have been addressed and the app is responsive at 1024 pixels and wider. I decided to leave the pagination at three people per page so the three cards are stacked on top of one another below 1024 and side by side 1024 and above. I used a simple pagination approach as the data being returned is not sizeable. There are many ways to handle pagination both on the client side or the server and although I looked into pagination on the server using graphql I decided to take the client side approach for this exercise. My pagination does allow for the user to navigate forward and backwards through the people returned from the query to SWAPI.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
