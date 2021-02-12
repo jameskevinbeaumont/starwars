@@ -24,11 +24,12 @@ function GetPeople() {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
-        <div>
-            {' '}
-            {currentPeople.map((person => {
-                return <h3 key={person.name}> {person.name} </h3>
-            }))}
+        <div className="main">
+            <div className="card-container">
+                {currentPeople.map((person => {
+                    return <div className="card-container__card" key={person.name}> {person.name} </div>
+                }))}
+            </div>
             <Pagination
                 peoplePerPage={peoplePerPage}
                 totalPeople={people.length}
